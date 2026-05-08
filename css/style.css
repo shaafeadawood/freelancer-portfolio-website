@@ -22,6 +22,7 @@ body{font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;
 .post-summary{margin:0 0 .75rem;color:#334155}
 .read-more{color:var(--accent);text-decoration:none;font-weight:600}
 .read-more:hover{text-decoration:underline}
+.read-more:focus-visible{text-decoration:underline;outline:2px solid currentColor;outline-offset:2px}
 .site-footer{border-top:1px solid #e6eef8;color:var(--muted);padding:1rem 0;text-align:center}
 
 /* Responsive layout for larger screens */
