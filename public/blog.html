@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog — Freelancer Portfolio</title>
+  <meta name="description" content="Articles and thoughts on web development and freelancing.">
+  <link rel="stylesheet" href="assets/css/style.css">
+ </head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">Your Name</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <h1>Blog</h1>
+      <p>Latest articles and tutorials.</p>
+      <ul class="posts">
+        <li class="post">Post 1 — summary.</li>
+        <li class="post">Post 2 — summary.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Freelancer — All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
