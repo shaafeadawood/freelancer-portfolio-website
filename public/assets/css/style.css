@@ -1,0 +1,70 @@
+:root{
+  --bg:#ffffff;
+  --text:#111827;
+  --muted:#6b7280;
+  --accent:#0ea5a4;
+  --max-width:1100px;
+  --gap:1.25rem;
+  --radius:8px;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+  color:var(--text);
+  background:var(--bg);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+}
+.container{max-width:var(--max-width);margin:0 auto;padding:1rem}
+.site-header{border-bottom:1px solid #e6e6e6;background:linear-gradient(180deg,rgba(255,255,255,0.6),transparent)}
+.site-header .container{display:flex;align-items:center;justify-content:space-between;padding:1rem 0}
+.brand{font-weight:600;color:var(--text);text-decoration:none}
+.main-nav ul{list-style:none;margin:0;padding:0;display:flex;gap:1rem}
+.main-nav a{color:var(--muted);text-decoration:none;padding:.25rem .5rem;border-radius:4px}
+.main-nav a:hover{color:var(--text);background:rgba(14,165,164,0.06)}
+.hero{padding:3rem 0}
+.hero h1{font-size:clamp(1.5rem,3vw,2.25rem);margin:.25rem 0}
+.lead{color:var(--muted);max-width:70ch}
+.intro,.projects,.services-list,.posts{padding:2rem 0}
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:var(--gap);list-style:none;padding:0;margin:0}
+.project{padding:1rem;border:1px solid #eaeaea;border-radius:var(--radius);background:#fff}
+.contact-form{display:grid;gap:.75rem;max-width:640px}
+.contact-form label{display:flex;flex-direction:column;font-size:.95rem;color:var(--muted)}
+input,textarea{padding:.5rem;border:1px solid #d1d5db;border-radius:6px;font-size:1rem}
+button{background:var(--accent);color:#fff;padding:.6rem .9rem;border:none;border-radius:6px;cursor:pointer}
+.site-footer{border-top:1px solid #e6e6e6;padding:1rem 0;margin-top:2rem}
+
+@media (max-width:600px){
+  .main-nav ul{gap:.5rem}
+  .site-header .container{padding:.5rem 0}
+}
+
+/* Contact page layout */
+.contact-section{padding:2rem 0}
+.contact-grid{display:grid;grid-template-columns:1fr 320px;gap:1.5rem;align-items:start}
+.contact-details{background:#fff;border:1px solid #eaeaea;padding:1rem;border-radius:8px}
+.contact-details a{color:var(--accent)}
+
+/* Buttons */
+.btn-primary{background:var(--accent);color:white;border:none;padding:.6rem .9rem;border-radius:6px;cursor:pointer}
+
+/* Service cards */
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem}
+.service-card{background:#fff;border:1px solid #eaeaea;padding:1rem;border-radius:8px}
+.service-card h3{margin-top:0}
+
+/* Header navigation */
+.main-nav ul{list-style:none;margin:0;padding:0;display:flex;gap:1rem}
+.main-nav a{color:var(--muted);text-decoration:none;padding:.25rem .5rem;border-radius:4px}
+.main-nav a.active{color:var(--text);font-weight:600}
+
+/* Hero */
+.hero{padding:3rem 0;display:flex;flex-direction:column;gap:.5rem}
+.hero .lead{font-size:1.05rem;color:var(--muted)}
+
+@media (max-width:800px){
+  .contact-grid{grid-template-columns:1fr}
+}
