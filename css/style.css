@@ -1,0 +1,31 @@
+/* Shared stylesheet for the portfolio */
+:root{
+  --max-width: 900px;
+  --accent:#2563eb;
+  --muted:#6b7280;
+  --bg:#ffffff;
+  --surface:#f8fafc;
+}
+*{box-sizing:border-box}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;line-height:1.5;color:#111;margin:0;background:var(--bg)}
+.container{max-width:var(--max-width);margin:0 auto;padding:1rem}
+.site-header{background:var(--surface);border-bottom:1px solid #e6eef8}
+.site-header .container{padding:1.25rem 1rem}
+.lead{color:var(--muted);margin-top:0}
+.posts{display:grid;grid-template-columns:1fr;gap:1.25rem;padding:1rem 0}
+.post{background:#fff;border:1px solid #e9eef6;padding:1rem;border-radius:8px}
+.post-title{margin:.25rem 0 .5rem;font-size:1.125rem}
+.post-date{display:block;color:var(--muted);font-size:.9rem;margin-bottom:.5rem}
+.post-summary{margin:0 0 .75rem;color:#334155}
+.read-more{color:var(--accent);text-decoration:none;font-weight:600}
+.read-more:hover{text-decoration:underline}
+.site-footer{border-top:1px solid #e6eef8;color:var(--muted);padding:1rem 0;text-align:center}
+
+/* Responsive layout for larger screens */
+@media (min-width:800px){
+  .posts{grid-template-columns:repeat(2,1fr)}
+}
+
+@media (min-width:1200px){
+  .posts{grid-template-columns:repeat(3,1fr)}
+}
