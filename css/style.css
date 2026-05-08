@@ -1,0 +1,52 @@
+/* Shared stylesheet for the portfolio */
+/* Updated: small visual tweaks */
+:root{
+  --max-width: 900px;
+  --accent:#2563eb;
+  --muted:#6b7280;
+  --bg:#ffffff;
+  --surface:#f8fafc;
+}
+*{box-sizing:border-box}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;line-height:1.5;color:#111;margin:0;background:var(--bg)}
+.skip-link{position:fixed;left:0;top:0;background:#111;color:#fff;padding:.5rem .75rem;border-radius:0 0 6px 0;transform:translateY(-120%);transition:transform .18s ease-in-out;z-index:999}
+.skip-link:focus{transform:translateY(0)}
+.container{max-width:var(--max-width);margin:0 auto;padding:1rem}
+.site-header{background:var(--surface);border-bottom:1px solid #e6eef8}
+.site-header .container{padding:1.25rem 1rem}
+.lead{color:var(--muted);margin-top:0}
+.posts{display:grid;grid-template-columns:1fr;gap:1.25rem;padding:1rem 0}
+.post{background:#fff;border:1px solid #e9eef6;padding:1.25rem;border-radius:10px;box-shadow:0 1px 2px rgba(16,24,40,0.03)}
+.post-title{margin:.25rem 0 .5rem;font-size:1.125rem}
+.post-date{display:block;color:var(--muted);font-size:.9rem;margin-bottom:.5rem}
+.post-summary{margin:0 0 .75rem;color:#334155}
+.read-more{color:var(--accent);text-decoration:none;font-weight:600}
+.read-more:hover{text-decoration:underline}
+.read-more:focus-visible{text-decoration:underline;outline:2px solid currentColor;outline-offset:2px}
+.site-footer{border-top:1px solid #e6eef8;color:var(--muted);padding:1rem 0;text-align:center}
+
+/* Responsive layout for larger screens */
+@media (min-width:800px){
+  .posts{grid-template-columns:repeat(2,1fr)}
+}
+
+@media (min-width:1200px){
+  .posts{grid-template-columns:repeat(3,1fr)}
+}
+
+/* Project grid styles for portfolio page */
+.projects{display:grid;grid-template-columns:1fr;gap:1.25rem;padding:1rem 0}
+.project{background:#fff;border:1px solid #e9eef6;padding:1.25rem;border-radius:10px;box-shadow:0 1px 2px rgba(16,24,40,0.03);display:flex;flex-direction:column}
+.project-title{margin:0 0 .5rem;font-size:1.125rem}
+.project-desc{margin:0 0 .75rem;color:#334155}
+.project-tech{margin:0 0 .5rem;color:var(--muted);font-size:.95rem}
+.project-link{margin-top:auto;color:var(--accent);text-decoration:none;font-weight:600}
+.project-link:hover{text-decoration:underline}
+
+@media (min-width:800px){
+  .projects{grid-template-columns:repeat(2,1fr)}
+}
+
+@media (min-width:1200px){
+  .projects{grid-template-columns:repeat(3,1fr)}
+}
